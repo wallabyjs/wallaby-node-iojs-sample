@@ -8,7 +8,7 @@ module.exports = function () {
       'test/**/*Spec.js'
     ],
 
-    bootstrap: function () {
+    setup: function () {
       global.expect = require('chai').expect;
     },
 
