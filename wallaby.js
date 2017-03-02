@@ -13,9 +13,8 @@ module.exports = function () {
     },
 
     env: {
-      type: 'node'
-      // More options are described here
-      // http://wallabyjs.com/docs/integration/node.html
+      type: 'node',
+      runner: 'node'
     }
   };
 };
