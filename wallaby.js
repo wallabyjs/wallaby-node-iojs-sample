@@ -1,7 +1,9 @@
 module.exports = function () {
   return {
     files: [
-      'lib/**/*.js'
+      'lib/**/*.js',
+      'Resources/**/*.json',
+      'Resources/**/*.png',
     ],
 
     tests: [
@@ -9,13 +11,14 @@ module.exports = function () {
     ],
 
     setup: function () {
-      global.expect = require('chai').expect;
+      require.extensions[".png"] = function() {
+        return null;
+      }
     },
 
     env: {
-      type: 'node'
-      // More options are described here
-      // http://wallabyjs.com/docs/integration/node.html
+      type: 'node',
+      runenr: 'node'
     }
   };
 };

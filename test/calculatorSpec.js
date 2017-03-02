@@ -1,12 +1,11 @@
-'use strict';
 
-let calculator = require('../lib/calculator');
+describe('wallaby', () => {
 
-// Remove arrow functions if you're not using ES2015
+  it('should work with PNG', () => {
+    console.log(require('../Resources/logo.png'));
+  });
 
-describe('calculator', () => {
-
-  it('should add numbers', () => {
-    expect(calculator.add(2, 2)).to.equal(4);
+  it('should work with JSON', () => {
+    console.log(require('../Resources/abc.json'));
   });
 });
