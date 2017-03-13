@@ -1,10 +1,7 @@
-'use strict';
+var describe = require('mocha').describe;
+var it = require('mocha').it;
 
-let calculator = require('../lib/calculator');
-
-describe('calculator', () => {
-
-  it('should add numbers', () => {
-    expect(calculator.add(2, 2)).to.equal(4);
-  });
-});
+describe('my feature', () => {
+  it('should do a thing', () => {
+  })
+})

@@ -1,16 +1,17 @@
-module.exports = function () {
+module.exports = function (wallaby) {
+
+  var path = require('path');
+  process.env.NODE_PATH += path.delimiter
+    + path.join(wallaby.localProjectDir, 'lib/node_modules');
+
   return {
     files: [
-      'lib/**/*.js'
+      'lib/*.js'
     ],
 
     tests: [
       'test/**/*Spec.js'
     ],
-
-    setup: function () {
-      global.expect = require('chai').expect;
-    },
 
     env: {
       type: 'node',
